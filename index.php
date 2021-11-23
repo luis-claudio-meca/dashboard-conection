@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="pt-br">
 <?php
 session_start();
 if (empty($_SESSION["login"]))
-    header('Location: /dashboard-conection/login');
+    header('Location: /login');
 ?>
-
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
 
     <meta charset="utf-8">

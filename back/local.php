@@ -3,10 +3,10 @@ class Conexion
 {
     public static function Conectar()
     {
-        define('servidor', 'dbconection.cqjgcxgqtekt.us-east-1.rds.amazonaws.com');
-        define('nome_bd', 'dash_conection');
-        define('usuario', 'admin');
-        define('password', 'ChamaTech');
+        define('servidor', '-');
+        define('nome_bd', '-');
+        define('usuario', '-');
+        define('password', '-');
         $opciones = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
         try {
             $conexion = new PDO("mysql:host=" . servidor . "; dbname=" . nome_bd, usuario, password, $opciones);
@@ -35,7 +35,7 @@ $bairro = (isset($_POST['bairro'])) ? filter_input(INPUT_POST, 'bairro', FILTER_
 $data = '';
 switch ($opcion) {
     case 1:
-        $consulta = " SELECT * FROM dados_visitantes limit $limite,10 ";
+        $consulta = " SELECT * FROM dados_visitantes  ORDER BY id DESC limit $limite,10  ";
         $resultado = $conexion->prepare($consulta);
         $resultado->execute();
         $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
@@ -71,7 +71,7 @@ switch ($opcion) {
         $resultado->execute();
 
 
-        $consulta = " SELECT * FROM dados_visitantes limit $limite,10 ";
+        $consulta = " SELECT * FROM dados_visitantes limit $limite,10 ORDER BY 'data' ASC ";
         $resultado = $conexion->prepare($consulta);
         $resultado->execute();
         $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
@@ -206,13 +206,13 @@ switch ($opcion) {
         break;
 
     case 12:
-        $consulta = " SELECT * FROM dados_visitantes WHERE status ='1' limit $limite,10 ";
+        $consulta = " SELECT * FROM dados_visitantes WHERE status ='1' ORDER BY id DESC limit $limite,10  ";
         $resultado = $conexion->prepare($consulta);
         $resultado->execute();
         $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
         break;
     case 13:
-        $consulta = " SELECT * FROM dados_visitantes WHERE status ='0' limit $limite,10 ";
+        $consulta = " SELECT * FROM dados_visitantes WHERE status ='0' ORDER BY id DESC limit $limite,10 ";
         $resultado = $conexion->prepare($consulta);
         $resultado->execute();
         $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
