@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #5A5757;
+    background: #fff;
+}
+
+input {
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
+    font-family: Raleway;
+    border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+    background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+    display: none;
+}
+
+button {
+    background-color: #000;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-family: Raleway;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+#prevBtn {
+    background-color: #169b6b;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #001;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+}
+
+.step.active {
+    opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+    background-color: #001
+}
+
+a .img-profile {
+    height: 3rem;
+    width: 3rem;
+}
+
+.lift {
+    box-shadow: 0 .15rem 1.75rem 0 rgba(33, 40, 50, .15);
+    transition: transform .15s ease-in-out, box-shadow .15s ease-in-out
+}
+
+.lift:hover {
+    transform: translateY(-.3333333333rem);
+    box-shadow: 0 .5rem 2rem 0 rgba(33, 40, 50, .25)
+}
+
+.lift:active {
+    transform: none;
+    box-shadow: 0 .15rem 1.75rem 0 rgba(33, 40, 50, .15)
+}
+
+.card.lift {
+    text-decoration: none;
+    color: inherit
+}
+
+.o-hidden {
+    overflow: hidden !important
+}
+
+.dropdown-menu {
+    background-color: #CAE1FF;
+}
+
+.edit {
+    background-color: #FFF68F;
+    width: 90%;
+    margin: auto;
+    border-radius: 5%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+
+}
+
+.del {
+    background-color: #FA8072;
+    width: 90%;
+    margin: auto;
+    border-radius: 5%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+
+}
+
+h3 {
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0px;
+    color: #1a1a7c;
+}
+
+
